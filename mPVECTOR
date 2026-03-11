@@ -1,0 +1,21 @@
+
+#include <iostream>
+#include <map>
+#include <vector>
+using namespace std;
+
+int main()
+{
+
+    vector<pair<int, string> > vec
+        = { { 1, "one" }, { 2, "two" }, { 3, "three" } };
+
+    
+    map<int, string> myMap(vec.begin(), vec.end());
+
+    for (auto& pair : myMap) {
+        cout << pair.first << " => " << pair.second << endl;
+    }
+
+    return 0;
+}
